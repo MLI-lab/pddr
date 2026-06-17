@@ -1,0 +1,33 @@
+# Core deep learning
+torch==2.1.0
+torchvision==0.16.0
+
+# Scientific computing
+numpy
+scipy
+
+# Image processing
+scikit-image
+Pillow
+imageio
+
+# Utilities
+einops
+tqdm
+h5py
+matplotlib
+PyYAML
+
+# Logging & monitoring
+tensorboard
+
+# Interactive Python
+ipython
+
+# Testing
+pytest
+
+# Preprocessing (optional, only needed for OCMR data)
+ismrmrd
+pandas
+boto3

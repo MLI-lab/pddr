@@ -1,0 +1,6 @@
+*__pycache__
+.vscode/
+.pytest_cache/
+*.jpeg
+*.h5
+*.DS_Store

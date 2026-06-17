@@ -1,0 +1,31 @@
+data:
+  train_path: [datasets/CineProcessed/2023/TrainingSet, datasets/CineProcessed/2024]
+  val_path: datasets/CineProcessed/2023/ValidationSet
+  dataset: CMRxProcessed
+  unet_type: SpatioTemporalUNetModel # SpatioTemporalUNetModel # UNetModel
+  filter:  null
+  model_path: null
+  resume_training: False
+
+output:
+  model_name: DynamicDiffusionPrior
+
+params:
+  train_steps: 50000
+  batch_size: 1
+  lr: 2.0e-4
+  gradient_accumulate_every: 2
+  loss_type: l2
+  optimizer: adam
+  scheduler: True
+  train_only_first: null
+
+sample:
+  sample_and_save_every: 5000
+  eta: 0.95
+
+ema:
+  step_start_ema: 2000
+  update_ema_every: 20
+  ema_decay: 0.995
+

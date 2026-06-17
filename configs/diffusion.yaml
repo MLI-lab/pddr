@@ -1,0 +1,35 @@
+diffusion:
+  timesteps: 1000
+  schedule: linear
+  noise_based: True
+
+SpatioTemporalUNetModel:
+  channel_mult: [1, 2, 4, 4]
+  in_channels:  2
+  out_channels: 2
+  model_channels: 32
+  num_res_blocks: 4
+  attention_resolutions: []
+  num_heads: 4
+  dropout: 0.0
+  use_scale_shift_norm: True
+  use_checkpoint: False
+  resblock_updown: True
+  skip_temporal: False
+  freeze_spatial: False
+  use_1D_temporal: True
+  temporal_kernel_size: 3
+
+UNetModel:
+  dims: 3
+  channel_mult: [1, 2, 4, 4]
+  in_channels:  2
+  out_channels: 2
+  model_channels: 32
+  num_res_blocks: 4
+  attention_resolutions: []
+  num_heads: 4
+  dropout: 0.0
+  use_scale_shift_norm: True
+  use_fp16: False
+  resblock_updown: True

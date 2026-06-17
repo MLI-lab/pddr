@@ -1,0 +1,39 @@
+output_path: experiments/reconstruction_prospective_example
+
+data:
+  ocmr_realtime: True
+  path: datasets/CineProcessed/OCMR/prospective/healthy/us_0081_1_5T.h5
+  slice_idx: null
+  repeat_cycle: 0
+  undersample: True
+  undersampling_type: ktGaussian
+  undersampling_factor: 12
+  alpha: 0.28
+  seed: 1996
+
+model:
+  path: models/DynamicDiffusionPrior
+  checkpoint: model.pt
+  unet_type: SpatioTemporalUNetModel
+  initialization: zero_filled
+
+optimizer:
+  lr: 1.0
+  lr_scheduler: True
+  lr_scheduler_factor: 0.25
+  lr_scheduler_patience: 50
+
+variation:
+  optim_steps: 200
+  reg_param: 0.05
+  tv_regularization: False
+  tv_reg_param: 0.0005
+  take_slab: True
+  slab_size: 36
+  slab_sampling: sliding_window
+  circular_padding: False
+  timestep_factor: 0.4
+  accumulation_steps: 1
+  time_sampling: descending
+  consistency_loss: l2
+  regularization_loss: l2
