@@ -1,7 +1,7 @@
 # Piecewise Dynamic Diffusion Regularization
 
 This repository provides methods and experiments necessary to reproduce the results presented in \
-"Piecewise Dynamic Diffusion Regularization for Reconstruction of Cardiac Cine MRI". \
+[Piecewise Dynamic Diffusion Regularization for Reconstruction of Cardiac Cine MRI](https://arxiv.org/abs/2607.03299). \
 The paper proposes Piecewise Dynamic Diffusion Regularization (PDDR), a reconstruction framework that integrates a pretrained spatiotemporal diffusion model as a generative prior for cardiac videos. Within a variational reconstruction scheme, PDDR enforces measurement consistency while leveraging the dynamic prior in a piecewise manner, enabling efficient processing of long real-time sequences.
 
 ![PDDR](media/method.png)
@@ -123,23 +123,14 @@ For further options (training/validation dataset, epoch, output path, ...) see d
 
 If you use this repository, please cite the paper:
 ```bibtex
-@article{citekey,
-    author = {},
-    title = {},
-    journal = {},
-    year = {}
+@article{fuernrohr2026pddr,
+    title={Piecewise Dynamic Diffusion Regularization for Reconstruction of Cardiac Cine MRI}, 
+    author={Florian Fürnrohr and Reinhard Heckel},
+    journal={arXiv preprint arXiv:2607.03299},
+    year={2026}
 }
 ```
 
 ##  License
 This project is covered by **BSD 2-Clause License**.
 
-<!-- 
-## Reference implementations
-
-TODO
-
-
-- [BART](https://github.com/mrirecon/bart/tree/master)
-- [fastMRI](https://github.com/facebookresearch/fastMRI/tree/main) 
--->
